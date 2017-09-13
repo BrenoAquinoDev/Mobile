@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DisciplinaHeaderView" customModule="Mobile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJX-Qc-tBG">
+                    <rect key="frame" x="16" y="7" width="305" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="305" id="DIS-AE-d1l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahD-FE-7tF">
+                    <rect key="frame" x="329" y="7" width="30" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="UHU-Cr-t8f"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LJX-Qc-tBG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="IJp-3u-BUj"/>
+                <constraint firstAttribute="bottom" secondItem="ahD-FE-7tF" secondAttribute="bottom" constant="7" id="LQa-Na-Onl"/>
+                <constraint firstAttribute="bottom" secondItem="LJX-Qc-tBG" secondAttribute="bottom" constant="7" id="WUx-YR-heI"/>
+                <constraint firstItem="LJX-Qc-tBG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="scU-nM-p1z"/>
+                <constraint firstItem="ahD-FE-7tF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="u2F-hM-5Ma"/>
+                <constraint firstAttribute="trailing" secondItem="ahD-FE-7tF" secondAttribute="trailing" constant="16" id="uXu-Zf-9ZM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="creditos" destination="ahD-FE-7tF" id="UcH-Wk-wQX"/>
+                <outlet property="nomeDisciplina" destination="LJX-Qc-tBG" id="ghy-r2-hET"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

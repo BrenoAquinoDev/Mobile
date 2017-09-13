@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Minhas Disciplinas-->
+        <scene sceneID="TDe-pC-igT">
+            <objects>
+                <viewController storyboardIdentifier="DisciplinaViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="aph-ny-GlI" customClass="DisciplinaViewController" customModule="Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxB-hW-2DX"/>
+                        <viewControllerLayoutGuide type="bottom" id="iJZ-rW-tZQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mMR-7m-oBh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xXo-Mf-VZA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aph-ny-GlI" id="fb4-O5-qoM"/>
+                                    <outlet property="delegate" destination="aph-ny-GlI" id="Dxs-mr-qVu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xXo-Mf-VZA" secondAttribute="trailing" id="5GO-YR-H3p"/>
+                            <constraint firstItem="iJZ-rW-tZQ" firstAttribute="top" secondItem="xXo-Mf-VZA" secondAttribute="bottom" id="9hl-OL-JCb"/>
+                            <constraint firstItem="xXo-Mf-VZA" firstAttribute="leading" secondItem="mMR-7m-oBh" secondAttribute="leading" id="N3R-lc-gkI"/>
+                            <constraint firstItem="xXo-Mf-VZA" firstAttribute="top" secondItem="fxB-hW-2DX" secondAttribute="bottom" id="rd9-fO-7vF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Minhas Disciplinas" id="yJq-Xf-cPd">
+                        <barButtonItem key="backBarButtonItem" title=" " id="LCL-0O-O7m"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="xXo-Mf-VZA" id="oTY-XD-GsF"/>
+                        <segue destination="ZuM-Ke-5rE" kind="show" identifier="segueDisciplinaDetalhes" id="Ohb-Yg-L7E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjz-df-81B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991.20000000000005" y="174.96251874062969"/>
+        </scene>
+        <!--Disciplina Page Menu View Controller-->
+        <scene sceneID="LbN-7u-8Cw">
+            <objects>
+                <viewController id="ZuM-Ke-5rE" customClass="DisciplinaPageMenuViewController" customModule="Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Bf-RB-Rcp"/>
+                        <viewControllerLayoutGuide type="bottom" id="NzF-VI-6lf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pqy-WE-2W4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5XY-tR-An7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918" y="175"/>
+        </scene>
+        <!--Scrolling Navigation Controller-->
+        <scene sceneID="Trz-w9-cXW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xyu-PZ-Fg3" customClass="ScrollingNavigationController" customModule="AMScrollingNavbar" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z1o-yK-flm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aph-ny-GlI" kind="relationship" relationship="rootViewController" id="0d1-hr-hzn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmr-5G-uYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="175"/>
+        </scene>
+    </scenes>
+</document>
